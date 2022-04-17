@@ -1,30 +1,38 @@
-#include <iostram>
-
+#include <iostream>
 using namespace std;
 
-class Array
+class Array{
+private:
+    unsigned char frome_array[4];
+public:
+    unsigned char& operator[](const int index);
+};
+unsigned char& Array:: operator[](const int index){
+    return frome_array[index];
+};
+/*
+class Decimal
 {
 private:
-	unsigned char array_function[];
-	int amount_of_element;
+    char sing;
+    unsigned char d_class[100];
 public:
-	Array(int y){
-		count_arr = y;
-	}	
- };
+    Decimal();
+    ~Decimal();
 
-class Dacimal
-{
-public:
-	Dacimal(){
-
-	};
-	~Dacimal();
 };
-class Octall{
 
-}
+class Octal
+{
+private:
+    unsigned char o_class[100];
+public:
+    Octal();
+    ~Octal();
 
+};
+*/  
 int main(){
-	
+    Array x;
+    x[2]=1;
 }
